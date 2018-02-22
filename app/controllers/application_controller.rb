@@ -8,10 +8,10 @@ class ApplicationController < Sinatra::Base
 
   get '/' do
     erb :index
-    binding.pry
   end
 
   post '/login' do
+    binding.pry
     @user = User.find_by(username: params[:username])
     if @user.nil?
       erb :error
