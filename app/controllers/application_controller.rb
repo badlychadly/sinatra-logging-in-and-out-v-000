@@ -8,6 +8,7 @@ class ApplicationController < Sinatra::Base
 
   get '/' do
     erb :index
+    binding.pry
   end
 
   post '/login' do
